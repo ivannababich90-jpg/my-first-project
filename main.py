@@ -64,29 +64,50 @@
 
 # Homework 3.1
 
-number5 = 3
-number6 = 9
+# number5 = 3
+# number6 = 9
 
-number5 = 3
-number6 = 9
-operation = "+"
-if operation == "+":
-    print(number5 + number6)
+# number5 = 3
+# number6 = 9
+# operation = "+"
+# if operation == "+":
+#    print(number5 + number6)
 
-number5 = 3
-number6 = 9
-operation = "-"
-if operation == "-":
-    print(number6 - number5)
+# number5 = 3
+# number6 = 9
+# operation = "-"
+# if operation == "-":
+#    print(number6 - number5)
 
-number5 = 3
-number6 = 9
-operation = "*"
-if operation == "*":
-    print(number6 * number5)
+# number5 = 3
+# number6 = 9
+# operation = "*"
+# if operation == "*":
+#    print(number6 * number5)
 
-number5 = 3
-number6 = 9
-operation = "/"
-if operation == "/":
-    print(int(number6 / number5))
+# number5 = 3
+# number6 = 9
+# operation = "/"
+# if operation == "/":
+#    print(int(number6 / number5))
+
+# Homework 3.2
+
+# numbers = [16, 5, 8, 12, 10]
+
+# if len(numbers) > 1:
+#    last_element = numbers.pop()
+#    numbers.insert(0, last_element)
+#    print(numbers)
+
+# Homework 3.3
+
+numbers = [1, 2, 3, 4, 5, 6]
+middle = (len(numbers) + 1) // 2
+
+first_list = numbers[:middle]
+second_list = numbers[middle:]
+result = [first_list, second_list]
+print(result)
+
+
