@@ -102,12 +102,105 @@
 
 # Homework 3.3
 
-numbers = [1, 2, 3, 4, 5, 6]
-middle = (len(numbers) + 1) // 2
+# numbers = [1, 2, 3, 4, 5, 6]
+# middle = (len(numbers) + 1) // 2
+# second_list = numbers[middle:]
+# result = [first_list, second_list]
+# print(result)
 
-first_list = numbers[:middle]
-second_list = numbers[middle:]
-result = [first_list, second_list]
-print(result)
+# Homework 4.1
+
+# numbers = [0, 1, 0, 12, 3]
+# result = []
+# for number in numbers:
+#    if number != 0:
+#        result.append(number)
+
+#for number in numbers:
+#    if number == 0:
+#        result.append( number )
+
+#print(result)
+
+#numbers = [1, 0, 13, 0, 0, 0, 5]
+#result = []
+#for number in numbers:
+#    if number != 0:
+#        result.append(number)
+
+#for number in numbers:
+#    if number == 0:
+#        result.append( number )
+
+#print(result)
+
+#numbers = [9, 0, 7, 31, 0, 45, 0, 45, 0, 0, 96, 0]
+#result = []
+#for number in numbers:
+#    if number != 0:
+#        result.append(number)
+
+#for number in numbers:
+#    if number == 0:
+#        result.append( number )
+
+#print(result)
+
+#Homework 4.2
+
+#numbers = [0, 1, 7, 2, 4, 8]
+#if len(numbers) == 0:
+#    result = 0
+#    print(result)
+#else:
+#    even_numbers = []
+#    for i in range(0, len(numbers), 2):
+#        even_numbers.append(numbers[i])
+#    total = sum(even_numbers)
+#    result = total * numbers[-1]
+#    print(f"({ " + ".join(map(str,even_numbers)) }) * {numbers[-1]} = {result}")
 
 
+#numbers = [0, 1, 7, 2, 4, 8]
+#if len(numbers) == 0:
+#    result = 0
+#else:
+#    total = 0
+#    for i in range(0, len(numbers), 2):
+#        total +=numbers[i]
+#    result = total * numbers[-1]
+#print(result)
+
+#numbers = [1, 3, 5]
+#if len(numbers) == 0:
+#    result = 0
+#else:
+#    total = 0
+#    for i in range(0, len(numbers), 2):
+#        total +=numbers[i]
+#    result = total * numbers[-1]
+#print(result)
+
+#numbers = []
+#if len(numbers) == 0:
+#    print(0)
+#else:
+#    total = 0
+#    for i in range(0, len(numbers), 2):
+#        total += numbers[i]
+#    result = total * numbers[-1]
+#    print(result)
+
+# Homework 4.3
+
+#numbers = [1, 2, 3, 4, 5, 6, 7, 9]
+#result = [numbers[0], numbers[2], numbers[-2]]
+#print(numbers, "==", result)
+
+#numbers = [1, 1, 2, 1]
+#result = [numbers[0], numbers[2], numbers[-2]]
+#print(numbers, "==", result)
+
+#numbers = [6, 3, 7]
+#result = [numbers[0], numbers[2], numbers[-2]]
+#print(numbers, "==", result)
