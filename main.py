@@ -1,4 +1,5 @@
 # Homework 1
+import keyword
 
 # print("Hello World")
 
@@ -204,3 +205,102 @@
 #numbers = [6, 3, 7]
 #result = [numbers[0], numbers[2], numbers[-2]]
 #print(numbers, "==", result)
+
+# Homework 5.1
+
+#import string
+#import keyword
+
+#name = input()
+
+#result = True
+
+# не може бути порожним
+#if name == "":
+#    result = False
+
+# не може починатися з цифри
+#elif name[0].isdigit():
+#    result = False
+
+# не може бути зарезервованим словом
+#elif name in keyword.kwlist:
+#    result = False
+
+#не може мiстити "__"
+#elif "__" in name:
+#    result = False
+
+#else:
+#    for symbol in name:
+
+# великi лiтери
+#        if symbol.isupper():
+#            result = False
+#            break
+
+# пробiли
+#        if symbol == " ":
+#            result = False
+#            break
+# знаки пунктуацii, окрiм "_"
+#        if symbol in string.punctuation and symbol != "_":
+#            result = False
+#            break
+
+#print(result)
+
+# Homework 5.2
+
+#while True:
+#    num1 = float(input("Enter a number: "))
+#    operator = input("+, -, *, /):")
+#    num2 = float(input("Enter a number: "))
+
+#    if operator == "+":
+#        result = num1 + num2
+#    elif operator == "-":
+#        result = num1 - num2
+#    elif operator == "*":
+#        result = num1 * num2
+#    elif operator == "/":
+#        if num2 != 0:
+#            result = num1 / num2
+#        else:
+#            result = "деление на ноль не возможно"
+#    else:
+#        result = "неизвестная опеация"
+
+#    print(result)
+
+#    answer = input("продолжить? *yes/y):")
+#    if answer.lower() not in ("Yes", "y"):
+#        print("калькулятор завершил работу")
+#        break
+
+# Homework 5.3
+
+#import string
+
+#text = input()
+
+# убираем знаки пунктуации
+#for symbol in string.punctuation:
+#    text = text.replace(symbol, "")
+
+#роздиляемо на слова
+#words = text.split()
+
+#каждое слово с большой + соединяем
+#hashtag = "#" + "".join(word.capitalize() for word in words)
+
+#обрезаем до 140 символов
+#hashtag = hashtag[:140]
+#print(hashtag)
+
+
+
+
+
+
+
