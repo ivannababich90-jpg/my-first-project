@@ -298,6 +298,53 @@ import keyword
 #hashtag = hashtag[:140]
 #print(hashtag)
 
+# Homework 6.1
+
+#import string
+#letters = string.ascii_letters
+#user = input("Enter your username-: ")
+#start, end = user.split("-")
+#start_index = letters.index(start)
+#end_index = letters.index(end)
+
+#print(letters[start_index:end_index + 1])
+
+# Homework 6.2
+
+#seconds = int(input("Enter the number of seconds: "))
+
+#day_seconds = 24 * 60 * 60
+#hour_seconds = 60 *60
+#minute_seconds = 60
+
+#days, rest = divmod(seconds, day_seconds)
+#hours, rest = divmod(rest, hour_seconds)
+#minutes, seconds = divmod(rest, minute_seconds)
+
+# word "день"
+#if days % 10 == 1 and days % 100 != 11:
+#    day_word = "день"
+#elif 2 <= days % 10 <= 4 and not (12 <= days % 100 <= 14):
+#    day_word = "дня"
+#else:
+#    day_word = "дней"
+
+#print(f"{days} {day_word} , {str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}")
+
+# Homework 6.3
+
+#number = int(input("Enter the number: "))
+#while number > 9:
+#    product = 1
+#    while number > 0:
+#        digit = number % 10
+#        product *= digit
+#        number //= 10
+
+#    number = product
+#print(number)
+
+
 
 
 
