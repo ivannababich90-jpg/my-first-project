@@ -310,17 +310,17 @@ import keyword
 #print(letters[start_index:end_index + 1])
 
 # Homework 6.2
-
+#
 #seconds = int(input("Enter the number of seconds: "))
-
+#
 #day_seconds = 24 * 60 * 60
 #hour_seconds = 60 *60
 #minute_seconds = 60
-
+#
 #days, rest = divmod(seconds, day_seconds)
 #hours, rest = divmod(rest, hour_seconds)
 #minutes, seconds = divmod(rest, minute_seconds)
-
+#
 # word "день"
 #if days % 10 == 1 and days % 100 != 11:
 #    day_word = "день"
@@ -328,11 +328,11 @@ import keyword
 #    day_word = "дня"
 #else:
 #    day_word = "дней"
-
+#
 #print(f"{days} {day_word} , {str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}")
-
+#
 # Homework 6.3
-
+#
 #number = int(input("Enter the number: "))
 #while number > 9:
 #    product = 1
@@ -340,11 +340,72 @@ import keyword
 #        digit = number % 10
 #        product *= digit
 #        number //= 10
-
+#
 #    number = product
 #print(number)
+#
+# Homework 7.1
+#
+#def say_hi(name,age):
+#    return f"Hi. My name is {name} and I am {age} years old"
+#assert say_hi("Alex", 32) == "Hi. My name is Alex and I am 32 years old", "Test1"
+#assert say_hi("Frank", 68) == "Hi. My name is Frank and I am 68 years old", "Test2"
+#
+#print("OK")
+#
+# Homework 7.2
+#
+#def correct_sentence(text):
+#    text = text[0].upper() + text[1:]
+#    if not text.endswith("."):
+#        text += "."
+#    return text
+#
+#assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
+#assert correct_sentence("hello") == "Hello.", 'Test2'
+#assert correct_sentence("Greetings, Friends") == "Greetings, Friends.", 'Test3'
+#assert correct_sentence("Greetings, friends.") == "Greetings, friends.", 'Test4'
+#assert correct_sentence("greetings, friends.") == "Greetings, friends.", 'Test5'
 
+#print('ОК')
 
+# Homework 7.3
+
+#def second_index(text, some_str) :
+#    first = text.find(some_str)
+#
+#    if first == -1:
+#        return None
+#
+#    second = text.find(some_str, first +1)
+#
+#    if second == -1:
+#        return None
+#    return second
+#
+#assert second_index("sims", "s") == 3, 'Test1'
+#assert second_index("find the river", "e") == 12, 'Test2'
+#assert second_index("hi", "h") is None, 'Test3'
+#assert second_index("Hello, hello", "lo") == 10, 'Test4'
+#print('ОК')
+
+# Homework 7.4
+
+#def common_elements():
+#
+#    list_3 = [i for i in range(100) if i % 3 == 0]
+#
+#    list_5 = [i for i in range(100) if i % 5 == 0]
+#
+#    set_3 = set(list_3)
+#
+#    set_5 = set(list_5)
+#
+#    return set_3 & set_5
+#
+#assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
+#
+#print("OK")
 
 
 
