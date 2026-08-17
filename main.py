@@ -660,3 +660,313 @@
 # assert is_even(24945638940387**3) == False, 'Test3'
 #
 # print('Ok')
+
+# Homework 13.1
+
+#def delete_html_tags(html_file, result_file='cleaned.txt'):
+#
+#    with open(html_file, 'r', encoding='utf-8') as file:
+#
+#        html = file.read()
+#
+#    clean_text = ''
+#
+#    inside_tag = False
+#
+#    for char in html:
+#
+#        if char == '<':
+#
+#            inside_tag = True
+#
+#        elif char == '>':
+#
+#            inside_tag = False
+#
+#        elif not inside_tag:
+#
+#           clean_text += char
+#
+#    with open(result_file, 'w', encoding='utf-8') as file:
+#
+#        file.write(clean_text)
+#
+#delete_html_tags('draft.html')
+
+# Homework 13.2
+
+#class Item:
+#
+#   def __init__(self, name, price, description, dimensions):
+#
+#        self.price = price
+#
+#        self.description = description
+#
+#        self.dimensions = dimensions
+#
+#        self.name = name
+#
+#    def __str__(self):
+#
+#        return f"{self.name}, price: {self.price}"
+#
+#class User:
+#
+#    def __init__(self, name, surname, numberphone):
+#
+#        self.name = name
+#
+#        self.surname = surname
+#
+#        self.numberphone = numberphone
+#
+#    def __str__(self):
+#
+#        return f"{self.name} {self.surname}"
+#
+#class Purchase:
+#
+#    def __init__(self, user):
+#
+#        self.products = {}
+#
+#        self.user = user
+#
+#        self.total = 0
+#
+#    def add_item(self, item, cnt):
+#
+#        self.products[item] = cnt
+#
+#    def __str__(self):
+#
+#        result = f"User: {self.user}\n"
+#
+#         result += "Items:\n"
+#
+#         for item, count in self.products.items():
+#
+#             result += f"{item.name}: {count} pcs.\n"
+#
+#         return result
+#
+#     def get_total(self):
+#
+#         total = 0
+#
+#         for item, count in self.products.items():
+#
+#             total += item.price * count
+#
+#         return total
+#
+# lemon = Item('lemon', 5, "yellow", "small")
+#
+# apple = Item('apple', 2, "red", "middle")
+#
+# print(lemon)
+#
+# buyer = User("Ivan", "Ivanov", "02628162")
+#
+# print(buyer)
+#
+# cart = Purchase(buyer)
+#
+# cart.add_item(lemon, 4)
+#
+# cart.add_item(apple, 20)
+#
+# print(cart)
+#
+# assert isinstance(cart.user, User) is True, 'Екземпляр класу User'
+#
+# assert cart.get_total() == 60, "Всього 60"
+#
+# assert cart.get_total() == 60, 'Повинно залишатися 60!'
+#
+# cart.add_item(apple, 10)
+#
+# print(cart)
+#
+# assert cart.get_total() == 40
+
+# Homework 14.1
+#
+# class Human:
+#
+#     def __init__(self, gender, age, first_name, last_name):
+#
+#         self.gender = gender
+#
+#         self.age = age
+#
+#         self.first_name = first_name
+#
+#         self.last_name = last_name
+#
+#     def __str__(self):
+#
+#         return f'{self.first_name} {self.last_name}, {self.age} years old, {self.gender}'
+#
+# class Student(Human):
+#
+#     def __init__(self, gender, age, first_name, last_name, record_book):
+#
+#         super().__init__(gender, age, first_name, last_name)
+#
+#         self.record_book = record_book
+#
+#     def __str__(self):
+#
+#         return f'{self.first_name} {self.last_name}, {self.record_book}'
+#
+# class Group:
+#
+#     def __init__(self, number):
+#
+#         self.number = number
+#
+#         self.group = set()
+#
+#     def add_student(self, student):
+#
+#         self.group.add(student)
+#
+#     def delete_student(self, last_name):
+#
+#         student = self.find_student(last_name)
+#
+#         if student is not None:
+#
+#             self.group.remove(student)
+#
+#     def find_student(self, last_name):
+#
+#         for student in self.group:
+#
+#             if student.last_name == last_name:
+#
+#                 return student
+#
+#         return None
+#
+#     def __str__(self):
+#
+#         all_students = ''
+#
+#         for student in self.group:
+#
+#             all_students += str(student) + '\n'
+#
+#         return f'Number:{self.number}\n {all_students}'
+#
+# st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
+#
+# st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
+#
+# gr = Group('PD1')
+#
+# gr.add_student(st1)
+#
+# gr.add_student(st2)
+#
+# print(gr)
+#
+# assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
+#
+# assert gr.find_student('Jobs2') is None, 'Test2'
+#
+# assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод пошуку повинен повертати екземпляр'
+#
+# gr.delete_student('Taylor')
+#
+# print(gr)
+#
+# gr.delete_student('Taylor')
+
+# Homework 14.2
+#
+# class Counter:
+#
+#     def __init__(self, current=1, min_value=0, max_value=10):
+#
+#         self.current = current
+#
+#         self.min_value = min_value
+#
+#         self.max_value = max_value
+#
+#     def set_current(self, start):
+#
+#         self.current = start
+#
+#     def set_max(self, max_max):
+#
+#         self.max_value = max_max
+#
+#     def set_min(self, min_min):
+#
+#         self.min_value = min_min
+#
+#     def step_up(self):
+#
+#         if self.current >= self.max_value:
+#
+#             raise ValueError('Достигнут максимум')
+#
+#         self.current += 1
+#
+#     def step_down(self):
+#
+#         if self.current <= self.min_value:
+#
+#             raise ValueError('Достигнут минимум')
+#
+#         self.current -= 1
+#
+#     def get_current(self):
+#
+#         return self.current
+#
+# counter = Counter()
+#
+# counter.set_current(7)
+#
+# counter.step_up()
+#
+# counter.step_up()
+#
+# counter.step_up()
+#
+# assert counter.get_current() == 10, 'Test1'
+#
+# try:
+#
+#     counter.step_up()
+#
+# except ValueError as e:
+#
+#     print(e)
+#
+# assert counter.get_current() == 10, 'Test2'
+#
+# counter.set_min(7)
+#
+# counter.step_down()
+#
+# counter.step_down()
+#
+# counter.step_down()
+#
+# assert counter.get_current() == 7, 'Test3'
+#
+# try:
+#
+#     counter.step_down()
+#
+# except ValueError as e:
+#
+#     print(e)
+#
+# assert counter.get_current() == 7, 'Test4'
